@@ -1580,7 +1580,7 @@ div#mc_embed_signup {
 }
 
 #team-alpha span.team {
-		font-family: JournalRegular;
+		font-family: open sans;
 		font-size: 20px;
 		color: #CF353B;
 }
@@ -1699,10 +1699,18 @@ div#mc_embed_signup {
 	left: 0;
 	background: #d1d3d4;
 	color: #CF353B;
-	overflow: auto;
+	overflow-x: hidden;
+	overflow-y: scroll;
 }
 
 .grid_TA_Wall figcaption h3 {
+	margin: 0;
+	padding: 0;
+	color: #333;
+}
+
+.grid_TA_Wall figcaption h4 {
+	font-size: 28px;
 	margin: 0;
 	padding: 0;
 	color: #333;
@@ -1758,7 +1766,7 @@ div#mc_embed_signup {
 
 /*TA Member Wall Caption Styling */
 .cs-style-1 figcaption {
-	font-family: JournalRegular;
+	font-family: open sans;
 	padding: 10%;
 	height: 100%;
 	width: 100%;
@@ -1788,7 +1796,7 @@ div#mc_embed_signup {
 
 /*TA Alumni Wall Caption Styling */
 .cs-style-2 figcaption {
-	font-family: JournalRegular;
+	font-family: open sans;
 	padding: 0 10% 20% 10%;
 	height: 110%;
 	width: 88%;

@@ -26,16 +26,20 @@ redirect_from:
                             {% for member in site.data.TA %}
                             {% assign check = counter | modulo:5 %}
 
-
-                            <div class="item col-lg-3 col-sm-4 col-xs-6">
+                            <div class="item col-lg-3 col-sm-4 col-xs-12">
                                 <li>
                                     <figure>
 
-                                        <img id="team-alpha-wall-picture" src="\assets\img\teamalpha\TA_minified\{{member.name | downcase | remove: " "}}_wall.png" alt="{{ member.name }}" style="border-radius:2%">
+                                        <img id="team-alpha-wall-picture" src="\assets\img\teamalpha\TA_minified\{{member.name | downcase | remove: " "}}_wall.png" alt=""{{ member.name }}" onerror="this.onerror=null;this.src='\\assets\\img\\teamalpha\\TA_minified\\placeholder_wall.png';" style="border-radius:2%">
 
-                                        <figcaption style="overflow: auto;">
+                                        <figcaption>
 
+                                            {% if member.name.size < 16 %}
                                             <h3>{{member.name}}<br><span class="team">{{member.team}}</span></h3>
+                                            {% else %}
+                                            <h4>{{member.name}}<br><span class="team">{{member.team}}</span></h4>
+                                            {% endif %}
+
 
 
                                                 <p>
@@ -88,6 +92,6 @@ redirect_from:
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
       </div>
-    </div><!-- /.modal-content
+    </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
